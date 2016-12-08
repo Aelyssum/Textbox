@@ -10,6 +10,18 @@
 		9F4612281DF8DF4600113BBA /* Textbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; };
 		9F46122D1DF8DF4600113BBA /* TextboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46122C1DF8DF4600113BBA /* TextboxTests.swift */; };
 		9F46122F1DF8DF4600113BBA /* Textbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4612211DF8DF4600113BBA /* Textbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F46123B1DF8FA7000113BBA /* TextboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612381DF8FA7000113BBA /* TextboxView.swift */; };
+		9F46124C1DF90CD900113BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46124B1DF90CD900113BBA /* AppDelegate.swift */; };
+		9F46124E1DF90CD900113BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46124D1DF90CD900113BBA /* ViewController.swift */; };
+		9F4612511DF90CD900113BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F46124F1DF90CD900113BBA /* Main.storyboard */; };
+		9F4612531DF90CD900113BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612521DF90CD900113BBA /* Assets.xcassets */; };
+		9F4612561DF90CD900113BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */; };
+		9F4612611DF90CD900113BBA /* TextboxSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */; };
+		9F836D9C1DF9A9FB00D1FE3E /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 9F836D9B1DF9A9FB00D1FE3E /* Resources */; };
+		9F836D9D1DF9AB2300D1FE3E /* TextboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612391DF8FA7000113BBA /* TextboxViewController.swift */; };
+		9F836D9E1DF9AB2E00D1FE3E /* TextboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */; };
+		9F836D9F1DF9B52A00D1FE3E /* Textbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; };
+		9F836DA01DF9B52A00D1FE3E /* Textbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,7 +32,35 @@
 			remoteGlobalIDString = 9F46121D1DF8DF4600113BBA;
 			remoteInfo = Textbox;
 		};
+		9F46125D1DF90CD900113BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4612151DF8DF4600113BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F4612481DF90CD800113BBA;
+			remoteInfo = TextboxSampleApp;
+		};
+		9F836DA11DF9B52A00D1FE3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F4612151DF8DF4600113BBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F46121D1DF8DF4600113BBA;
+			remoteInfo = Textbox;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F836DA31DF9B52A00D1FE3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F836DA01DF9B52A00D1FE3E /* Textbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9F46121E1DF8DF4600113BBA /* Textbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Textbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +69,20 @@
 		9F4612271DF8DF4600113BBA /* TextboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46122C1DF8DF4600113BBA /* TextboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxTests.swift; sourceTree = "<group>"; };
 		9F46122E1DF8DF4600113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4612381DF8FA7000113BBA /* TextboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxView.swift; sourceTree = "<group>"; };
+		9F4612391DF8FA7000113BBA /* TextboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextboxViewController.swift; path = ../Textbox/TextboxViewController.swift; sourceTree = "<group>"; };
+		9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextboxViewController.xib; path = ../Textbox/TextboxViewController.xib; sourceTree = "<group>"; };
+		9F4612491DF90CD800113BBA /* TextboxSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextboxSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F46124B1DF90CD900113BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F46124D1DF90CD900113BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F4612501DF90CD900113BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F4612521DF90CD900113BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F4612551DF90CD900113BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F4612571DF90CD900113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F46125C1DF90CD900113BBA /* TextboxSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextboxSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxSampleAppTests.swift; sourceTree = "<group>"; };
+		9F4612621DF90CD900113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F836D9B1DF9A9FB00D1FE3E /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +101,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F4612461DF90CD800113BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F836D9F1DF9B52A00D1FE3E /* Textbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4612591DF90CD900113BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +124,8 @@
 			children = (
 				9F4612201DF8DF4600113BBA /* Textbox */,
 				9F46122B1DF8DF4600113BBA /* TextboxTests */,
+				9F46124A1DF90CD900113BBA /* TextboxSampleApp */,
+				9F46125F1DF90CD900113BBA /* TextboxSampleAppTests */,
 				9F46121F1DF8DF4600113BBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +135,8 @@
 			children = (
 				9F46121E1DF8DF4600113BBA /* Textbox.framework */,
 				9F4612271DF8DF4600113BBA /* TextboxTests.xctest */,
+				9F4612491DF90CD800113BBA /* TextboxSampleApp.app */,
+				9F46125C1DF90CD900113BBA /* TextboxSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,7 +144,9 @@
 		9F4612201DF8DF4600113BBA /* Textbox */ = {
 			isa = PBXGroup;
 			children = (
+				9F4612381DF8FA7000113BBA /* TextboxView.swift */,
 				9F4612211DF8DF4600113BBA /* Textbox.h */,
+				9F836D9B1DF9A9FB00D1FE3E /* Resources */,
 				9F4612221DF8DF4600113BBA /* Info.plist */,
 			);
 			path = Textbox;
@@ -84,6 +159,30 @@
 				9F46122E1DF8DF4600113BBA /* Info.plist */,
 			);
 			path = TextboxTests;
+			sourceTree = "<group>";
+		};
+		9F46124A1DF90CD900113BBA /* TextboxSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				9F46124B1DF90CD900113BBA /* AppDelegate.swift */,
+				9F46124D1DF90CD900113BBA /* ViewController.swift */,
+				9F4612391DF8FA7000113BBA /* TextboxViewController.swift */,
+				9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */,
+				9F46124F1DF90CD900113BBA /* Main.storyboard */,
+				9F4612521DF90CD900113BBA /* Assets.xcassets */,
+				9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */,
+				9F4612571DF90CD900113BBA /* Info.plist */,
+			);
+			path = TextboxSampleApp;
+			sourceTree = "<group>";
+		};
+		9F46125F1DF90CD900113BBA /* TextboxSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */,
+				9F4612621DF90CD900113BBA /* Info.plist */,
+			);
+			path = TextboxSampleAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,12 +235,52 @@
 			productReference = 9F4612271DF8DF4600113BBA /* TextboxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9F4612481DF90CD800113BBA /* TextboxSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4612631DF90CD900113BBA /* Build configuration list for PBXNativeTarget "TextboxSampleApp" */;
+			buildPhases = (
+				9F4612451DF90CD800113BBA /* Sources */,
+				9F4612461DF90CD800113BBA /* Frameworks */,
+				9F4612471DF90CD800113BBA /* Resources */,
+				9F836DA31DF9B52A00D1FE3E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F836DA21DF9B52A00D1FE3E /* PBXTargetDependency */,
+			);
+			name = TextboxSampleApp;
+			productName = TextboxSampleApp;
+			productReference = 9F4612491DF90CD800113BBA /* TextboxSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F46125B1DF90CD900113BBA /* TextboxSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F4612661DF90CD900113BBA /* Build configuration list for PBXNativeTarget "TextboxSampleAppTests" */;
+			buildPhases = (
+				9F4612581DF90CD900113BBA /* Sources */,
+				9F4612591DF90CD900113BBA /* Frameworks */,
+				9F46125A1DF90CD900113BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F46125E1DF90CD900113BBA /* PBXTargetDependency */,
+			);
+			name = TextboxSampleAppTests;
+			productName = TextboxSampleAppTests;
+			productReference = 9F46125C1DF90CD900113BBA /* TextboxSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9F4612151DF8DF4600113BBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Resources,
+				);
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Aelyssum Corp";
@@ -149,12 +288,24 @@
 					9F46121D1DF8DF4600113BBA = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = JQ8AZF896J;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					9F4612261DF8DF4600113BBA = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = JQ8AZF896J;
 						ProvisioningStyle = Automatic;
+					};
+					9F4612481DF90CD800113BBA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JQ8AZF896J;
+						ProvisioningStyle = Automatic;
+					};
+					9F46125B1DF90CD900113BBA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JQ8AZF896J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F4612481DF90CD800113BBA;
 					};
 				};
 			};
@@ -164,6 +315,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9F4612141DF8DF4600113BBA;
 			productRefGroup = 9F46121F1DF8DF4600113BBA /* Products */;
@@ -172,6 +324,8 @@
 			targets = (
 				9F46121D1DF8DF4600113BBA /* Textbox */,
 				9F4612261DF8DF4600113BBA /* TextboxTests */,
+				9F4612481DF90CD800113BBA /* TextboxSampleApp */,
+				9F46125B1DF90CD900113BBA /* TextboxSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,10 +335,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F836D9C1DF9A9FB00D1FE3E /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9F4612251DF8DF4600113BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4612471DF90CD800113BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4612561DF90CD900113BBA /* LaunchScreen.storyboard in Resources */,
+				9F4612531DF90CD900113BBA /* Assets.xcassets in Resources */,
+				9F4612511DF90CD900113BBA /* Main.storyboard in Resources */,
+				9F836D9E1DF9AB2E00D1FE3E /* TextboxViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F46125A1DF90CD900113BBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F46123B1DF8FA7000113BBA /* TextboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +383,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F4612451DF90CD800113BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F46124E1DF90CD900113BBA /* ViewController.swift in Sources */,
+				9F836D9D1DF9AB2300D1FE3E /* TextboxViewController.swift in Sources */,
+				9F46124C1DF90CD900113BBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4612581DF90CD900113BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4612611DF90CD900113BBA /* TextboxSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -217,7 +409,36 @@
 			target = 9F46121D1DF8DF4600113BBA /* Textbox */;
 			targetProxy = 9F4612291DF8DF4600113BBA /* PBXContainerItemProxy */;
 		};
+		9F46125E1DF90CD900113BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F4612481DF90CD800113BBA /* TextboxSampleApp */;
+			targetProxy = 9F46125D1DF90CD900113BBA /* PBXContainerItemProxy */;
+		};
+		9F836DA21DF9B52A00D1FE3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F46121D1DF8DF4600113BBA /* Textbox */;
+			targetProxy = 9F836DA11DF9B52A00D1FE3E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F46124F1DF90CD900113BBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4612501DF90CD900113BBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F4612551DF90CD900113BBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9F4612301DF8DF4600113BBA /* Debug */ = {
@@ -261,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -308,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -322,6 +543,7 @@
 		9F4612331DF8DF4600113BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JQ8AZF896J;
@@ -330,10 +552,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Textbox/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.Textbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +565,7 @@
 		9F4612341DF8DF4600113BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JQ8AZF896J;
@@ -349,6 +574,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Textbox/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.Textbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +586,7 @@
 		9F4612361DF8DF4600113BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JQ8AZF896J;
 				INFOPLIST_FILE = TextboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,12 +599,73 @@
 		9F4612371DF8DF4600113BBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JQ8AZF896J;
 				INFOPLIST_FILE = TextboxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.TextboxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9F4612641DF90CD900113BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JQ8AZF896J;
+				INFOPLIST_FILE = TextboxSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.TextboxSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9F4612651DF90CD900113BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JQ8AZF896J;
+				INFOPLIST_FILE = TextboxSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.TextboxSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9F4612671DF90CD900113BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JQ8AZF896J;
+				INFOPLIST_FILE = TextboxSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.TextboxSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextboxSampleApp.app/TextboxSampleApp";
+			};
+			name = Debug;
+		};
+		9F4612681DF90CD900113BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JQ8AZF896J;
+				INFOPLIST_FILE = TextboxSampleAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aelyssum.TextboxSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextboxSampleApp.app/TextboxSampleApp";
 			};
 			name = Release;
 		};
@@ -400,6 +688,7 @@
 				9F4612341DF8DF4600113BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F4612351DF8DF4600113BBA /* Build configuration list for PBXNativeTarget "TextboxTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +697,25 @@
 				9F4612371DF8DF4600113BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4612631DF90CD900113BBA /* Build configuration list for PBXNativeTarget "TextboxSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4612641DF90CD900113BBA /* Debug */,
+				9F4612651DF90CD900113BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F4612661DF90CD900113BBA /* Build configuration list for PBXNativeTarget "TextboxSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4612671DF90CD900113BBA /* Debug */,
+				9F4612681DF90CD900113BBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TextboxSampleApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>9F4612261DF8DF4600113BBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F4612481DF90CD800113BBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F46125B1DF90CD900113BBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
