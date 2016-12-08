@@ -17,9 +17,7 @@
 		9F4612531DF90CD900113BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612521DF90CD900113BBA /* Assets.xcassets */; };
 		9F4612561DF90CD900113BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */; };
 		9F4612611DF90CD900113BBA /* TextboxSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */; };
-		9F836D9C1DF9A9FB00D1FE3E /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 9F836D9B1DF9A9FB00D1FE3E /* Resources */; };
-		9F836D9D1DF9AB2300D1FE3E /* TextboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612391DF8FA7000113BBA /* TextboxViewController.swift */; };
-		9F836D9E1DF9AB2E00D1FE3E /* TextboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */; };
+		9F836D9C1DF9A9FB00D1FE3E /* TextboxIO-Resources in Resources */ = {isa = PBXBuildFile; fileRef = 9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */; };
 		9F836D9F1DF9B52A00D1FE3E /* Textbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; };
 		9F836DA01DF9B52A00D1FE3E /* Textbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -51,14 +49,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		9F836DA31DF9B52A00D1FE3E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				9F836DA01DF9B52A00D1FE3E /* Textbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -70,8 +68,6 @@
 		9F46122C1DF8DF4600113BBA /* TextboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxTests.swift; sourceTree = "<group>"; };
 		9F46122E1DF8DF4600113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F4612381DF8FA7000113BBA /* TextboxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxView.swift; sourceTree = "<group>"; };
-		9F4612391DF8FA7000113BBA /* TextboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextboxViewController.swift; path = ../Textbox/TextboxViewController.swift; sourceTree = "<group>"; };
-		9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextboxViewController.xib; path = ../Textbox/TextboxViewController.xib; sourceTree = "<group>"; };
 		9F4612491DF90CD800113BBA /* TextboxSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextboxSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46124B1DF90CD900113BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F46124D1DF90CD900113BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +78,7 @@
 		9F46125C1DF90CD900113BBA /* TextboxSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextboxSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxSampleAppTests.swift; sourceTree = "<group>"; };
 		9F4612621DF90CD900113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F836D9B1DF9A9FB00D1FE3E /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "TextboxIO-Resources"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +142,7 @@
 			children = (
 				9F4612381DF8FA7000113BBA /* TextboxView.swift */,
 				9F4612211DF8DF4600113BBA /* Textbox.h */,
-				9F836D9B1DF9A9FB00D1FE3E /* Resources */,
+				9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */,
 				9F4612221DF8DF4600113BBA /* Info.plist */,
 			);
 			path = Textbox;
@@ -166,8 +162,6 @@
 			children = (
 				9F46124B1DF90CD900113BBA /* AppDelegate.swift */,
 				9F46124D1DF90CD900113BBA /* ViewController.swift */,
-				9F4612391DF8FA7000113BBA /* TextboxViewController.swift */,
-				9F46123A1DF8FA7000113BBA /* TextboxViewController.xib */,
 				9F46124F1DF90CD900113BBA /* Main.storyboard */,
 				9F4612521DF90CD900113BBA /* Assets.xcassets */,
 				9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */,
@@ -335,7 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F836D9C1DF9A9FB00D1FE3E /* Resources in Resources */,
+				9F836D9C1DF9A9FB00D1FE3E /* TextboxIO-Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +347,6 @@
 				9F4612561DF90CD900113BBA /* LaunchScreen.storyboard in Resources */,
 				9F4612531DF90CD900113BBA /* Assets.xcassets in Resources */,
 				9F4612511DF90CD900113BBA /* Main.storyboard in Resources */,
-				9F836D9E1DF9AB2E00D1FE3E /* TextboxViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F46124E1DF90CD900113BBA /* ViewController.swift in Sources */,
-				9F836D9D1DF9AB2300D1FE3E /* TextboxViewController.swift in Sources */,
 				9F46124C1DF90CD900113BBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

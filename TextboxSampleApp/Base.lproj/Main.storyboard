@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,22 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-0M-ZCc">
-                                <rect key="frame" x="319" y="20" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-0M-ZCc">
+                                <rect key="frame" x="317" y="20" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="didSave" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0y-fz-34s"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-LI-n5o" customClass="TextboxView" customModule="Textbox">
-                                <rect key="frame" x="0.0" y="58" width="375" height="298"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-LI-n5o" customClass="TextboxView" customModule="Textbox">
+                                <rect key="frame" x="16" y="60" width="343" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="2uc-eR-BmV"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-0o-gDC">
-                                <rect key="frame" x="0.0" y="364" width="375" height="303"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-0o-gDC">
+                                <rect key="frame" x="16" y="360" width="343" height="307"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,6 +47,8 @@
                         <constraints>
                             <constraint firstItem="gw8-0o-gDC" firstAttribute="top" secondItem="bOL-LI-n5o" secondAttribute="bottom" id="BeJ-Gx-ccB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gw8-0o-gDC" secondAttribute="trailing" id="Ogk-Ag-5hW"/>
+                            <constraint firstItem="Zu7-0M-ZCc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RqT-pK-alQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zu7-0M-ZCc" secondAttribute="trailing" constant="8" id="T3w-rd-Udq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bOL-LI-n5o" secondAttribute="trailing" id="UGl-vy-o9g"/>
                             <constraint firstItem="bOL-LI-n5o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="URI-f8-oHR"/>
                             <constraint firstItem="bOL-LI-n5o" firstAttribute="top" secondItem="Zu7-0M-ZCc" secondAttribute="bottom" constant="10" id="cOV-vb-Rse"/>

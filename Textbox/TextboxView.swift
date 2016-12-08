@@ -35,22 +35,23 @@ public class TextboxView: UIView {
         configuration.preferences = preferences
         let controller = WKUserContentController()
         let bundle = Bundle(identifier: "com.Aelyssum.Textbox")!
-        let textboxURL = bundle.path(forResource: "textboxio", ofType: "js")!
-        do {
-            let textboxString = try String(contentsOfFile: textboxURL, encoding:String.Encoding.utf8)
-            let textboxJS = WKUserScript(source: textboxString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-            controller.addUserScript(textboxJS)
-        } catch {
-            assertionFailure("Failed to initialize textboxio.js")
-        }
+//        let urlTextboxJS = bundle.path(forResource: "textboxio", ofType: "js", inDirectory: "TextboxIO- Resources/textboxio")!
+//        do {
+//            let textboxString = try String(contentsOfFile: urlTextboxJS, encoding:String.Encoding.utf8)
+//            let textboxJS = WKUserScript(source: textboxString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+//            controller.addUserScript(textboxJS)
+//        } catch {
+//            assertionFailure("Failed to initialize textboxio.js")
+//        }
         configuration.userContentController = controller
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height),
                             configuration: configuration)
         webView.allowsBackForwardNavigationGestures = false
-        let textboxHTMLURL = bundle.url(forResource: "textboxio", withExtension: "html")!
+        let textboxHTMLURL = bundle.path(forResource: "textboxio", ofType: "html", inDirectory: "TextboxIO-Resources")!
+        let baseURL = bundle.bundleURL.appendingPathComponent("TextboxIO-Resources", isDirectory: true)
         do {
-            let textboxHTMLString = try String(contentsOf: textboxHTMLURL, encoding: String.Encoding.utf8)
-            webView.loadHTMLString(textboxHTMLString, baseURL: URL(fileURLWithPath: "/" ))
+            let textboxHTMLString = try String(contentsOfFile: textboxHTMLURL, encoding: String.Encoding.utf8)
+            webView.loadHTMLString(textboxHTMLString, baseURL: baseURL)
         } catch {
             assertionFailure("Failed to initialize textboxio.html")
         }

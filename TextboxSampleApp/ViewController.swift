@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textBox.setEditText("<H1>Foo</H1><p>The quick red fox jumped over the lazy brown dog</p>")
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,12 +27,13 @@ class ViewController: UIViewController {
 
     
     @IBAction func didSave() {
+        NSLog("ViewController:didSave:  Executed")
         textBox.getEditText() {
             result, error in
             if error == nil {
                 self.html.text = result
             } else {
-                NSLog(error!.localizedDescription)
+                NSLog("ViewController:didSave:  "+error!.localizedDescription)
             }
         }
     }
