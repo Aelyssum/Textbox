@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Welcome to Textbox.io</title>
     <script type='text/javascript' src='textboxio/textboxio.js'></script>
     <link rel="stylesheet" type="text/css" href="example.css" />
@@ -11,7 +12,7 @@
       /*
       This function replaces <div> on a page with the id='textbox' with an instance of Textbox.io.
       */
-    var editor;
+      var editor;
       var instantiateTextbox = function () {
         editor = textboxio.replace('#textbox', {
           paste: {
@@ -27,27 +28,18 @@
     <script>
       /*
       This function gets the content from the instance of Textbox.io
-      with the ID 'textbox'
       */
       var getEditorContent = function(){
-          /*
-          var editors = textboxio.get('#textbox');
-          var editor = editors[0];
-           */
           var returnVal = {
               html:         editor.content.get(),
               hasUpdates:   editor.content.isDirty()
           };
           return returnVal
       };
-    var setEditorContent = function(contentToEdit) {
-        /*
-        var editors = textboxio.get('#textbox');
-        var editor = editors[0];
-         */
+      var setEditorContent = function(contentToEdit) {
         editor.content.set(contentToEdit)
         editor.focus()
-    }
+      };
     </script>
   </head>
 
