@@ -34,6 +34,12 @@
           var editor = editors[0];
           return editor.content.get();
       };
+    var setEditorContent = function(contentToEdit) {
+        var editors = textboxio.get('#textbox');
+        var editor = editors[0];
+        editor.focus()
+        editor.content.set(contentToEdit)
+    }
     </script>
   </head>
 
@@ -41,7 +47,6 @@
     <div style="width:50%; margin:auto">
         <textarea id="textbox" style="width: 100%; height: 400px;">
         </textarea>
-        <p align="center"><button onclick="javascript:alert(getEditorContent());">Get Content</button></p>
     </div>
   </body>
 </html>

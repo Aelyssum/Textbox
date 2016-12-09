@@ -63,7 +63,7 @@ public class TextboxView: UIView {
     
     public func setEditText(_ editText: String) {
         self.editText = editText
-        webView.evaluateJavaScript("document.getElementById('textbox').value = \"\(editText)\";")
+        webView.evaluateJavaScript("setEditorContent(\"\(editText)\")")
     }
     
     public func getEditText(completion: @escaping (_ text: String?, _ error: Error?)->()) {

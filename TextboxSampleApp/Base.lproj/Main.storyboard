@@ -42,9 +42,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOx-po-T6N">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="didLoad" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECb-1W-TZZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VOx-po-T6N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9SQ-BE-Sog"/>
                             <constraint firstItem="gw8-0o-gDC" firstAttribute="top" secondItem="bOL-LI-n5o" secondAttribute="bottom" id="BeJ-Gx-ccB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gw8-0o-gDC" secondAttribute="trailing" id="Ogk-Ag-5hW"/>
                             <constraint firstItem="Zu7-0M-ZCc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RqT-pK-alQ"/>
@@ -54,10 +62,12 @@
                             <constraint firstItem="bOL-LI-n5o" firstAttribute="top" secondItem="Zu7-0M-ZCc" secondAttribute="bottom" constant="10" id="cOV-vb-Rse"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gw8-0o-gDC" secondAttribute="bottom" id="jH2-OZ-U18"/>
                             <constraint firstItem="gw8-0o-gDC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="veE-KX-IqT"/>
+                            <constraint firstItem="Zu7-0M-ZCc" firstAttribute="top" secondItem="VOx-po-T6N" secondAttribute="top" id="wVo-wu-rtY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="html" destination="gw8-0o-gDC" id="CuQ-JC-9H1"/>
+                        <outlet property="loadButton" destination="VOx-po-T6N" id="4re-vM-aDm"/>
                         <outlet property="saveButton" destination="Zu7-0M-ZCc" id="CVa-iR-P5I"/>
                         <outlet property="textBox" destination="bOL-LI-n5o" id="0L9-2x-cwW"/>
                     </connections>
