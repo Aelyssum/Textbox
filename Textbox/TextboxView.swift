@@ -66,16 +66,17 @@ public class TextboxView: UIView {
         webView.evaluateJavaScript("setEditorContent(\"\(editText)\")")
     }
     
-    public func getEditText(completion: @escaping (_ text: String?, _ error: Error?)->()) {
+    public func getEditText(completion: @escaping (_ text: String?, _ hasUpdates: Bool?, _ error: Error?)->()) {
         webView.evaluateJavaScript("getEditorContent()") {
             result, _error in
             if let error = _error {
-                completion(nil, error)
-            } else if let text = result as? String {
-                self.editText = text
-                completion(text, nil)
+                completion(nil, nil, error)
+            } else if let json = result as? [String: Any] {
+                self.editText = json["html"] as? String ?? ""
+                let hasUpdates = json["hasUpdates"] as! Bool
+                completion(self.editText, hasUpdates, nil)
             } else {
-                
+                NSLog("Unable to parse return value")
             }
         }
     }

@@ -36,9 +36,9 @@ class ViewController: UIViewController {
     @IBAction func didSave() {
         NSLog("ViewController:didSave:  Executed")
         textBox.getEditText() {
-            result, error in
+            html, hasUpdates, error in
             if error == nil {
-                self.html.text = result
+                self.html.text = html
             } else {
                 NSLog("ViewController:didSave:  "+error!.localizedDescription)
             }
