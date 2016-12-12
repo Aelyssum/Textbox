@@ -34,15 +34,17 @@
               html:         editor.content.get(),
               hasUpdates:   editor.content.isDirty()
           };
+          editor.restore();
           return returnVal
       };
       var setEditorContent = function(contentToEdit) {
+        instantiateTextbox();
         editor.content.set(contentToEdit)
-        editor.focus()
+        /* editor.focus() */
       };
     </script>
   </head>
 
-  <body onload="instantiateTextbox();">
+  <body>
   </body>
 </html>
