@@ -14,7 +14,7 @@
       */
       var editor;
       var instantiateTextbox = function () {
-        editor = textboxio.replace('#textbox', {
+        editor = textboxio.replace('body', {
           paste: {
             style: 'clean'
           },
@@ -44,7 +44,5 @@
   </head>
 
   <body onload="instantiateTextbox();">
-      <div id="textbox" style="width: 100%; height: 100%;">
-      </div>
   </body>
 </html>
