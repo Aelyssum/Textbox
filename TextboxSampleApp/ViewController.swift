@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             textBox.isEnabled = true
             saveButton.setTitle("Done", for: .normal)
         } else {
+            textBox.endEditing(false)
             textBox.getEditText() {
                 html, hasUpdates, error in
                 if error == nil {

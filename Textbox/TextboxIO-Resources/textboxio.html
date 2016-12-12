@@ -27,9 +27,11 @@
       This function gets the content from the instance of Textbox.io
       */
       var getEditorContent = function(){
+          var html = editor.content.get();
+          var isDirty = editor.content.isDirty();
           var returnVal = {
-              html:         editor.content.get(),
-              hasUpdates:   editor.content.isDirty()
+              html:         html,
+              hasUpdates:   isDirty
           };
           editor.restore();
           editor = {};
@@ -40,6 +42,7 @@
         editor.content.set(contentToEdit)
         /* editor.focus() */
       };
+    
     </script>
   </head>
 

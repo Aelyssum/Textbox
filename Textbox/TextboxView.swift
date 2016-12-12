@@ -80,6 +80,7 @@ public class TextboxView: UIView {
             result, _error in
             if let error = _error {
                 NSLog("TextboxView:getEditText:evaluateJavaScript: \(error.localizedDescription)")
+                print("Result: \n\(result)")
                 completion(nil, nil, error)
             } else if let json = result as? [String: Any] {
                 self.editText = json["html"] as? String ?? ""
