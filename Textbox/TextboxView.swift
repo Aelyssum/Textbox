@@ -43,23 +43,17 @@ public class TextboxView: UIView {
         configuration.preferences = preferences
         let controller = WKUserContentController()
         let bundle = Bundle(identifier: "com.Aelyssum.Textbox")!
-//        let urlTextboxJS = bundle.path(forResource: "textboxio", ofType: "js", inDirectory: "TextboxIO- Resources/textboxio")!
-//        do {
-//            let textboxString = try String(contentsOfFile: urlTextboxJS, encoding:String.Encoding.utf8)
-//            let textboxJS = WKUserScript(source: textboxString, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-//            controller.addUserScript(textboxJS)
-//        } catch {
-//            assertionFailure("Failed to initialize textboxio.js")
-//        }
         configuration.userContentController = controller
         webView = WKWebView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height),
                             configuration: configuration)
         webView.allowsBackForwardNavigationGestures = false
+        webView.navigationDelegate = self
         let textboxHTMLURL = bundle.path(forResource: "textboxio", ofType: "html", inDirectory: "TextboxIO-Resources")!
         let baseURL = bundle.bundleURL.appendingPathComponent("TextboxIO-Resources", isDirectory: true)
         do {
             let textboxHTMLString = try String(contentsOfFile: textboxHTMLURL, encoding: String.Encoding.utf8)
             webView.loadHTMLString(textboxHTMLString, baseURL: baseURL)
+            webView.evaluateJavaScript("document.body.innerHTML=\"\(editText)\"")
         } catch {
             assertionFailure("Failed to initialize textboxio.html")
         }
@@ -67,7 +61,7 @@ public class TextboxView: UIView {
     }
     
     public var delegate: TextboxDelegate?
-    private var editText: String = ""
+    fileprivate var editText: String = ""
     
     public func setEditText(_ editText: String) {
         self.editText = editText
@@ -79,16 +73,20 @@ public class TextboxView: UIView {
     }
     
     public func getEditText(completion: @escaping (_ text: String?, _ hasUpdates: Bool?, _ error: Error?)->()) {
+        NSLog("TextboxView:getEditText: Executed")
+        webView.endEditing(true)
+        isEnabled = false
         webView.evaluateJavaScript("getEditorContent()") {
             result, _error in
             if let error = _error {
+                NSLog("TextboxView:getEditText:evaluateJavaScript: \(error.localizedDescription)")
                 completion(nil, nil, error)
             } else if let json = result as? [String: Any] {
                 self.editText = json["html"] as? String ?? ""
                 let hasUpdates = json["hasUpdates"] as! Bool
                 completion(self.editText, hasUpdates, nil)
             } else {
-                NSLog("Unable to parse return value")
+                NSLog("TextboxView:getEditText:evaluateJavaScript:  Unable to parse return value")
             }
         }
     }
@@ -105,4 +103,11 @@ public class TextboxView: UIView {
         
     }
 
+}
+
+extension TextboxView: WKNavigationDelegate {
+    
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.body.innerHTML=\"\(self.editText)\"")
+    }
 }

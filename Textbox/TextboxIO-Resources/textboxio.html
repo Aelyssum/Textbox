@@ -23,9 +23,6 @@
           }
         });
       };
-
-    </script>
-    <script>
       /*
       This function gets the content from the instance of Textbox.io
       */
@@ -35,6 +32,7 @@
               hasUpdates:   editor.content.isDirty()
           };
           editor.restore();
+          editor = {};
           return returnVal
       };
       var setEditorContent = function(contentToEdit) {
