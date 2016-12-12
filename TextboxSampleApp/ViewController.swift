@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         html.text = "<H1>Foo</H1><p>The quick red fox jumped over the lazy brown dog</p>"
         saveButton.setTitle("Edit", for: .normal)
-        textBox.isEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +41,7 @@ class ViewController: UIViewController {
             textBox.isEnabled = true
             saveButton.setTitle("Done", for: .normal)
         } else {
+            textBox.endEditing(false)
             textBox.getEditText() {
                 html, hasUpdates, error in
                 if error == nil {
@@ -50,8 +50,8 @@ class ViewController: UIViewController {
                     NSLog("ViewController:didSave:  "+error!.localizedDescription)
                 }
             }
-            saveButton.setTitle("Edit", for: .normal)
             textBox.isEnabled = false
+            saveButton.setTitle("Edit", for: .normal)
         }
     }
     
