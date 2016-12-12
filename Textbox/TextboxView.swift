@@ -17,6 +17,14 @@ public class TextboxView: UIView {
     
     private var webView: WKWebView!
     
+    public var isEnabled = false {
+        willSet(newValue) {
+            if !isEnabled && newValue {
+                webView.evaluateJavaScript("instantiateTextbox()")
+            }
+        }
+    }
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         initWebView(frame: frame)
@@ -63,7 +71,11 @@ public class TextboxView: UIView {
     
     public func setEditText(_ editText: String) {
         self.editText = editText
-        webView.evaluateJavaScript("setEditorContent(\"\(editText)\")")
+        if isEnabled {
+            webView.evaluateJavaScript("setEditorContent(\"\(editText)\")")
+        } else {
+            webView.evaluateJavaScript("document.body.innerHTML=\"\(editText)\";")
+        }
     }
     
     public func getEditText(completion: @escaping (_ text: String?, _ hasUpdates: Bool?, _ error: Error?)->()) {
