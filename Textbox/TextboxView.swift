@@ -15,6 +15,15 @@ public protocol TextboxDelegate {
 
 public class TextboxView: UIView {
     
+    public var isEnabled = false {
+        didSet(newValue) {
+            NSLog("TextboxView:isEnabled:didSet: Executed")
+            if newValue {
+                webView.evaluateJavaScript("instantiateTextbox()")
+            }
+        }
+    }
+    
     private var webView: WKWebView!
     
     override public init(frame: CGRect) {
@@ -62,11 +71,13 @@ public class TextboxView: UIView {
     private var editText: String = ""
     
     public func setEditText(_ editText: String) {
+        NSLog("TextboxView:setEditText:  Executed")
         self.editText = editText
         webView.evaluateJavaScript("setEditorContent(\"\(editText)\")")
     }
     
     public func getEditText(completion: @escaping (_ text: String?, _ hasUpdates: Bool?, _ error: Error?)->()) {
+        NSLog("TextboxView:getEditText:  Executed")
         webView.evaluateJavaScript("getEditorContent()") {
             result, _error in
             if let error = _error {
@@ -81,16 +92,29 @@ public class TextboxView: UIView {
         }
     }
     
-    func setTemplate(html: URL) {
-        
+    // MARK:  UIResponder methods
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NSLog("TextboxView:touchesBegan:  Executed")
+        if isEnabled {
+            webView.becomeFirstResponder()
+//            webView.evaluateJavaScript("enableEditing(true)")
+            webView.evaluateJavaScript("instantiateTextbox()")
+        }
+        super.touchesBegan(touches, with: event)
     }
     
-    func setTemplate(css: URL) {
-        
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
     }
     
-    func allows(imageInsertion: Bool) {
-        
+    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
     }
+    
+    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+    }
+    
 
 }

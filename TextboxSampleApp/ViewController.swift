@@ -19,9 +19,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         html.text = "<H1>Foo</H1><p>The quick red fox jumped over the lazy brown dog</p>"
+        saveButton.setTitle("Edit", for: .normal)
+        textBox.isEnabled = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        textBox.setEditText(html.text)
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,13 +38,20 @@ class ViewController: UIViewController {
     
     @IBAction func didSave() {
         NSLog("ViewController:didSave:  Executed")
-        textBox.getEditText() {
-            html, hasUpdates, error in
-            if error == nil {
-                self.html.text = html
-            } else {
-                NSLog("ViewController:didSave:  "+error!.localizedDescription)
+        if saveButton.titleLabel!.text == "Edit" {
+            textBox.isEnabled = true
+            saveButton.setTitle("Done", for: .normal)
+        } else {
+            textBox.getEditText() {
+                html, hasUpdates, error in
+                if error == nil {
+                    self.html.text = html
+                } else {
+                    NSLog("ViewController:didSave:  "+error!.localizedDescription)
+                }
             }
+            saveButton.setTitle("Edit", for: .normal)
+            textBox.isEnabled = false
         }
     }
     

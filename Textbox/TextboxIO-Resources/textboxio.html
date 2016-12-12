@@ -13,8 +13,10 @@
       This function replaces <div> on a page with the id='textbox' with an instance of Textbox.io.
       */
       var editor;
+      var isEnabled = false
       var instantiateTextbox = function () {
-        editor = textboxio.replace('#textbox', {
+        console.log("instantiateTextbox:  Executed")
+        editor = textboxio.replace('body', {
           paste: {
             style: 'clean'
           },
@@ -23,28 +25,53 @@
           }
         });
       };
-
-    </script>
-    <script>
       /*
       This function gets the content from the instance of Textbox.io
       */
-      var getEditorContent = function(){
-          var returnVal = {
-              html:         editor.content.get(),
-              hasUpdates:   editor.content.isDirty()
+      var enableEditing = function(editingEnabled) {
+          if (editingEnabled && !isEnabled) {
+              editor = textboxio.replace('body', {
+                         paste: {
+                             style: 'clean'
+                         },
+                         css: {
+                             stylesheets: ['example.css']
+                         }
+             });
+          } else if !editingEnabled && isEnabled {
+              editor.restore();
           };
-          return returnVal
+          isEnabled = editingEnabled;
+      };
+      var getEditorContent = function() {
+          if (isEnabled) {
+              var returnVal = {
+                  html:         editor.content.get(),
+                  hasUpdates:   editor.content.isDirty()
+              };
+              return returnVal;
+          } else {
+              var returnVal = {
+                  html:         document.body.innerHTML,
+                  hasUpdates:   false
+              };
+              return returnVal;
+          };
       };
       var setEditorContent = function(contentToEdit) {
-        editor.content.set(contentToEdit)
-        editor.focus()
+          document.body.innerHTML="<p>The quick red fox</p>";
+          /*
+          if (isEnabled) {
+              editor.content.set(contentToEdit);
+          } else {
+              document.body.innerHTML=contentToEdit;
+          };
+           */
       };
     </script>
   </head>
 
-  <body onload="instantiateTextbox();">
-      <div id="textbox" style="width: 100%; height: 100%;">
-      </div>
+  <body onLoad="instantiateTextbox()">
+      <p>foo</p>
   </body>
 </html>
