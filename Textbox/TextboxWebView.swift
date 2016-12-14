@@ -84,9 +84,9 @@ class TextboxWebView: WKWebView {
         if isEnabled && !isEditing {
             NSLog("TextboxWebView:hitTest: isEnabled && !isEditing")
             isEditing = true
-            evaluateJavaScript("enableEditing()")
+            evaluateJavaScript("enableEditing();")
         }
-        return self
+        return super.hitTest(point, with: event)
     }
     
     // MARK: - UIResponder protocol overrides
@@ -121,6 +121,6 @@ class TextboxWebView: WKWebView {
 extension TextboxWebView: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        evaluateJavaScript("document.body.innerHTML=\"\(self.editText)\"")
+//        evaluateJavaScript("document.body.innerHTML=\"\(self.editText)\"")
     }
 }

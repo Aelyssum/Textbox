@@ -14,6 +14,7 @@
       */
       var editor;
       var enableEditing = function() {
+          document.body.innerHTML = "enableEditing: Executed";
           editor = textboxio.replace('body', {
                                          paste: {
                                             style: 'clean'
@@ -21,7 +22,7 @@
                                          css: {
                                             stylesheets: ['example.css']
                                          }
-                                     });
+                                     })
       };
       var disableEditing = function() {
           editor.restore();
@@ -40,14 +41,13 @@
           return returnVal
       };
       var setEditorContent = function(contentToEdit) {
-<!--        instantiateTextbox();-->
         editor.content.set(contentToEdit)
-        /* editor.focus() */
       };
     
     </script>
   </head>
 
   <body>
+      <p>textbox.io</p>
   </body>
 </html>

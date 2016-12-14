@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import WebKit
+//import WebKit
 
 public class TextboxView: UIView {
     
@@ -38,9 +38,7 @@ public class TextboxView: UIView {
         webView.isUserInteractionEnabled = true
         insertSubview(webView, at: 0)
     }
-    
-    fileprivate var editText: String = ""
-    
+        
     public func setEditText(_ editText: String) {
         webView.setEditText(editText)
     }

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        textBox.setEditText(html.text)
+//        textBox.setEditText(html.text)
     }
     
     override func didReceiveMemoryWarning() {
