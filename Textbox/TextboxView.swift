@@ -17,13 +17,8 @@ public class TextboxView: UIView {
     
     private var webView: WKWebView!
     
-    public var isEnabled = false {
-        willSet(newValue) {
-            if !isEnabled && newValue {
-                webView.evaluateJavaScript("instantiateTextbox()")
-            }
-        }
-    }
+    public var isEnabled = false
+    var isEditing = false
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,18 +87,23 @@ public class TextboxView: UIView {
         }
     }
     
-    func setTemplate(html: URL) {
-        
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        NSLog("TextboxView:hitTest: Executed")
+        if isEnabled && !isEditing {
+            webView.evaluateJavaScript("instantiateTextbox()")
+            isEditing = true
+        }
+        return super.hitTest(point, with: event)
     }
     
-    func setTemplate(css: URL) {
-        
+    override public func resignFirstResponder() -> Bool {
+        NSLog("TextboxView:resignFirstResponder: Executed")
+        if isEnabled && isEditing {
+            webView.evaluateJavaScript("editor.restore()")
+            isEditing = false
+        }
+        return true
     }
-    
-    func allows(imageInsertion: Bool) {
-        
-    }
-
 }
 
 extension TextboxView: WKNavigationDelegate {
