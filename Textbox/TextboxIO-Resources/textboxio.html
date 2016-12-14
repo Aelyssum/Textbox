@@ -13,15 +13,19 @@
       This function replaces the <body> on a page with the id='textbox' with an instance of Textbox.io.
       */
       var editor;
-      var instantiateTextbox = function () {
-        editor = textboxio.replace('body', {
-          paste: {
-            style: 'clean'
-          },
-          css: {
-            stylesheets: ['example.css']
-          }
-        });
+      var enableEditing = function() {
+          editor = textboxio.replace('body', {
+                                         paste: {
+                                            style: 'clean'
+                                         },
+                                         css: {
+                                            stylesheets: ['example.css']
+                                         }
+                                     });
+      };
+      var disableEditing = function() {
+          editor.restore();
+          editor = {};
       };
       /*
       This function gets the content from the instance of Textbox.io
@@ -33,12 +37,10 @@
               html:         html,
               hasUpdates:   isDirty
           };
-          editor.restore();
-          editor = {};
           return returnVal
       };
       var setEditorContent = function(contentToEdit) {
-        instantiateTextbox();
+<!--        instantiateTextbox();-->
         editor.content.set(contentToEdit)
         /* editor.focus() */
       };

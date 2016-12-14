@@ -17,6 +17,7 @@
 		9F4612531DF90CD900113BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612521DF90CD900113BBA /* Assets.xcassets */; };
 		9F4612561DF90CD900113BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4612541DF90CD900113BBA /* LaunchScreen.storyboard */; };
 		9F4612611DF90CD900113BBA /* TextboxSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */; };
+		9F48871E1DFF849D002175F2 /* TextboxWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F48871D1DFF849D002175F2 /* TextboxWebView.swift */; };
 		9F836D9C1DF9A9FB00D1FE3E /* TextboxIO-Resources in Resources */ = {isa = PBXBuildFile; fileRef = 9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */; };
 		9F836D9F1DF9B52A00D1FE3E /* Textbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; };
 		9F836DA01DF9B52A00D1FE3E /* Textbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F46121E1DF8DF4600113BBA /* Textbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -78,6 +79,7 @@
 		9F46125C1DF90CD900113BBA /* TextboxSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextboxSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4612601DF90CD900113BBA /* TextboxSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextboxSampleAppTests.swift; sourceTree = "<group>"; };
 		9F4612621DF90CD900113BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F48871D1DFF849D002175F2 /* TextboxWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextboxWebView.swift; sourceTree = "<group>"; };
 		9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "TextboxIO-Resources"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				9F4612211DF8DF4600113BBA /* Textbox.h */,
 				9F836D9B1DF9A9FB00D1FE3E /* TextboxIO-Resources */,
 				9F4612221DF8DF4600113BBA /* Info.plist */,
+				9F48871D1DFF849D002175F2 /* TextboxWebView.swift */,
 			);
 			path = Textbox;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F48871E1DFF849D002175F2 /* TextboxWebView.swift in Sources */,
 				9F46123B1DF8FA7000113BBA /* TextboxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,9 +39,11 @@ class ViewController: UIViewController {
         NSLog("ViewController:didSave:  Executed")
         if saveButton.titleLabel!.text == "Edit" {
             textBox.isEnabled = true
+            html.isEditable = true
             saveButton.setTitle("Done", for: .normal)
         } else {
             textBox.endEditing(false)
+            html.endEditing(false)
             textBox.getEditText() {
                 html, hasUpdates, error in
                 if error == nil {
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
                 }
             }
             textBox.isEnabled = false
+            html.isEditable = false
             saveButton.setTitle("Edit", for: .normal)
         }
     }
