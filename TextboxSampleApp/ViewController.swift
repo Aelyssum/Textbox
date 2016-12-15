@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         html.text = "<H1>Foo</H1><p>The quick red fox jumped over the lazy brown dog</p>"
+        html.delegate = self
         saveButton.setTitle("Edit", for: .normal)
     }
 
@@ -54,7 +55,11 @@ class ViewController: UIViewController {
             saveButton.setTitle("Edit", for: .normal)
         }
     }
-    
 
 }
 
+extension ViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        let _ = textBox.resignFirstResponder()
+    }
+}

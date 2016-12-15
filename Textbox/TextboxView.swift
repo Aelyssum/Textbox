@@ -95,11 +95,21 @@ public class TextboxView: UIView {
         }
         return super.hitTest(point, with: event)
     }
-    
+/*
+    override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        NSLog("TextboxView:point:  Executed")
+        let isInside = super.point(inside: point, with: event)
+        if !isInside && isEditing {
+            webView.evaluateJavaScript("removeTextbox()")
+            isEditing = false
+        }
+        return isInside
+    }
+*/    
     override public func resignFirstResponder() -> Bool {
         NSLog("TextboxView:resignFirstResponder: Executed")
         if isEnabled && isEditing {
-            webView.evaluateJavaScript("editor.restore()")
+            webView.evaluateJavaScript("removeTextbox()")
             isEditing = false
         }
         return true
